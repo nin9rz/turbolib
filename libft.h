@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jenibaud <jean.nibaudeau2@outlook.fr>      +#+  +:+       +#+        */
+/*   By: jenibaud <jenibaud@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:45:32 by jenibaud          #+#    #+#             */
-/*   Updated: 2024/10/21 10:46:39 by jenibaud         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:12:06 by jenibaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 /*##############################################*/
 /*					Part 1						*/
@@ -78,5 +79,21 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/*##############################################*/
+/*					ft_printf					*/
+/*##############################################*/
+
+int		ft_printf(const char *format, ...);
+int		ft_putchar(char c);
+int		ft_putstr(char *str);
+int		ft_putnbr(long long n);
+int		putnbr_base(unsigned long n, char *base);
+
+/*##############################################*/
+/*				get_next_line					*/
+/*##############################################*/
+
+
 
 #endif

@@ -35,21 +35,20 @@ CSRC = ft_atoi.c\
 		ft_putchar_fd.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c\
+		ft_lstadd_front_bonus.c\
+		ft_lstsize_bonus.c\
+		ft_lstlast_bonus.c\
+		ft_lstadd_back_bonus.c\
+		ft_lstdelone_bonus.c\
+		ft_lstclear_bonus.c\
+		ft_lstiter_bonus.c\
+		ft_lstmap_bonus.c\
+		ft_lstnew_bonus.c\
+		ft_printf.c\
+		ft_printf_utils.c
 
 COBJ = 	$(CSRC:.c=.o)
-
-BONUS_SRC = ft_lstnew_bonus.c\
-			ft_lstadd_front_bonus.c\
-			ft_lstsize_bonus.c\
-			ft_lstlast_bonus.c\
-			ft_lstadd_back_bonus.c\
-			ft_lstdelone_bonus.c\
-			ft_lstclear_bonus.c\
-			ft_lstiter_bonus.c\
-			ft_lstmap_bonus.c
-
-BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 %.o:%.c
 	@cc $(CFLAGS) $< -c -o $@
@@ -58,12 +57,8 @@ $(NAME): $(COBJ)
 	@echo "Compiled all files ✅"
 	@ar rcs $(NAME) $(COBJ)
 
-bonus: $(BONUS_OBJ) $(NAME)
-	@ar rcs $(NAME) $(BONUS_OBJ)
-
 clean: 
 	@rm -f $(COBJ) 
-	@rm -f $(BONUS_OBJ)
 
 fclean: clean
 	@rm -f $(NAME)
@@ -77,4 +72,4 @@ re: fclean all
 so: bonus
 	gcc -shared -o libft.so $(NAME)
 
-.PHONY: so re all fclean clean bonus
+.PHONY: so re all fclean clean
