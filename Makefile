@@ -2,7 +2,9 @@ NAME = libft.a
 
 CFLAGS = -Werror -Wall -Wextra -g
 
-CSRC = ft_atoi.c\
+CSRC = get_next_line/get_next_line.c\
+		get_next_line/get_next_line_utils.c\
+		ft_atoi.c\
 		ft_isascii.c\
 		ft_memcpy.c\
 		ft_strlcpy.c\

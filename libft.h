@@ -6,7 +6,7 @@
 /*   By: jenibaud <jenibaud@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:45:32 by jenibaud          #+#    #+#             */
-/*   Updated: 2025/04/15 15:12:06 by jenibaud         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:14:55 by jenibaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,5 @@ int		ft_putchar(char c);
 int		ft_putstr(char *str);
 int		ft_putnbr(long long n);
 int		putnbr_base(unsigned long n, char *base);
-
-/*##############################################*/
-/*				get_next_line					*/
-/*##############################################*/
-
-
 
 #endif
